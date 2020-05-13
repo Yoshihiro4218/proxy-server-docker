@@ -5,6 +5,6 @@ services:
     build: .
     image: "thr3a/squid:latest"
     ports:
-      - "80:3128"
+      - "3128:3128"
     # volumes:
     #   - "./squid.conf:/etc/squid/conf.d/default.conf"
