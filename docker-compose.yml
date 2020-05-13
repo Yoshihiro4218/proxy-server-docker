@@ -1,21 +1,10 @@
-version: '2'
+version: '3'
 
 services:
   squid:
-    image: sameersbn/squid:3.5.27-2
+    build: .
+    image: "thr3a/squid:latest"
     ports:
       - "80:3128"
-    volumes:
-      - /srv/docker/squid/cache:/var/spool/squid
-      - ./squid.conf:/etc/squid/squid.conf
-      - ./.htpasswd:/etc/squid/.htpasswd
-    restart: always
-
-
-# version: '2'
-
-# services:
-#   container1:
-#     build:
-#       context: .
-#       dockerfile: Dockerfile1
+    # volumes:
+    #   - "./squid.conf:/etc/squid/conf.d/default.conf"
